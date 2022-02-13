@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+ 
+<body onload="load()">
+    <div class="mode-div">
+        <button class="mode" onclick="toDark()">⚫</button>
+    </div>
+    
+    <div class="calc">
+        
+        <div class="left left-hidden">
+            <button class="num nl nb">%</button>
+            <button class="num nl nfac">x!</button>
+            <button class="num nl nroot">√</button>
+            <button class="num nl nlog">ln</button>
+            <button class="num nl npow">x^</button>
+        </div>
+        <div class="input">
+            <div class="inner">
+                <div class="ans"></div>
+                <div class="ques"></div>
+            </div>
+        </div>
+        <div class="btns-hidden btns-hidden1">
+            <button class="num nexp">eˣ</button>
+            <button class="num npi">𝛑</button>
+            <button class="num nsin">sin</button>
+            <button class="num ncos">cos</button>
+            <button class="num ntan">tan</button>
+            <button class="num nbr nbr1">(</button>
+            <button class="num nbr nbr2">)</button>
+            <button class="num ncosec">cosec</button>
+            <button class="num ncot">cot</button>
+            <button class="num nsec">sec</button>
+        </div>
+        <div class="num-btns">
+            <div class="num-btns1">
+                <button class="num  nc">C</button>
+                <button class="num  nd">/</button>
+                <button class="num  nm">x</button>
+                <button  class="num res n9">9</button>
+                <button  class="num res n8">8</button>
+                <button  class="num res n7">7</button>
+                <button  class="num res n6">6</button>
+                <button  class="num res n5">5</button>
+                <button  class="num res n4">4</button>
+                <button  class="num res n3">3</button>
+                <button  class="num res n2">2</button>
+                <button  class="num res n1">1</button>
+                <button class="num  narr" onclick="expand()">◄</button>
+                <button  class="num res n0">0</button>
+                <button  class="num res ndot">.</button>
+            </div>
+            <div class="num-btns2">
+                <button class="num  ne">=</button>
+                <button class="num  np">+</button>
+                <button class="num  ns">-</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function load(){
+        document.querySelector(".mode").style.textAlign = 'left';
+ 
+    }
+    function expand(){
+        document.querySelector(".num-btns").classList.add("num-btns-expand");
+        document.querySelector(".narr").setAttribute("onclick","compress()")
+        document.querySelector(".btns-hidden").classList.remove("btns-hidden1");
+        // document.querySelector(".btns-hidden").style.cssText = `transition:all 0.5s ease-out`;
+
+        document.querySelector(".input").classList.add("input-expand");
+        // document.querySelector(".input").style.cssText = `transition:all 0.5s ease-out`;
+
+        document.querySelector(".inner").classList.add("inner-expand")
+        // document.querySelector(".inner").style.cssText = `transition:all 0.5s ease-out`;
+
+        document.querySelector(".left").classList.remove("left-hidden")
+        // document.querySelector(".left").style.cssText = `transition:all 0.5s ease-in`;
+
+        document.querySelector(".calc").classList.add("calc-hidden")
+        document.querySelector(".mode-div").classList.add("mode-div-hidden")
+        document.querySelector(".mode-div").style.cssText = `transition:all 0.3s ease-out;`;
+
+        document.querySelector(".ques").classList.add("ques-hidden")
+        document.querySelector(".ans").classList.add("ans-hidden")
+
+
+    }
+    function compress(){
+        document.querySelector(".num-btns").classList.remove("num-btns-expand");
+        document.querySelector(".narr").setAttribute("onclick","expand()")
+        document.querySelector(".btns-hidden").classList.add("btns-hidden1");
+        document.querySelector(".input").classList.remove("input-expand")
+        document.querySelector(".inner").classList.remove("inner-expand")
+        document.querySelector(".left").classList.add("left-hidden")
+        document.querySelector(".calc").classList.remove("calc-hidden")
+        document.querySelector(".mode-div").classList.remove("mode-div-hidden")
+
+        document.querySelector(".ques").classList.remove("ques-hidden")
+        document.querySelector(".ans").classList.remove("ans-hidden")
+
+    }
+    function toDark(){
+        document.querySelector(".mode").style.cssText = `text-align:right;transition:all 0.5s ease-out;color:white;background-color:white`;
+        document.querySelector(".mode").setAttribute("onclick","toLight()")
+        document.querySelector(".num-btns").style.cssText = `background-color:rgb(20, 19, 20) ;  transition: background-color 0.9s ease-in-out;`;
+        document.querySelector(".input").style.cssText = `background-color:rgb(20, 19, 20); transition: background-color 0.9s ease-in-out;`;
+        document.querySelector(".left").style.cssText = `background-color:rgb(20, 19, 20);transition: background-color 0.9s ease-in-out;`;
+        document.querySelector(".btns-hidden").style.cssText = `background-color:rgb(20, 19, 20);transition: background-color 0.9s ease-in-out;`;
+        document.querySelector(".inner").style.cssText = `background-color:rgb(39, 39, 39); transition:background-color 0.9s ease-in-out;`;
+        document.querySelector(".ques").style.cssText = `color:white;transition:color 0.5s;`;
+
+    }
+
+    function toLight(){
+        document.querySelector(".mode").style.cssText = `text-align:left;background-color:black;transition:all 0.5s ease-out;`;
+        document.querySelector(".mode").setAttribute("onclick","toDark()")
+        document.querySelector(".num-btns").style.cssText = `background-color:rgb(235, 233, 235);transition: background-color 0.9s ease-in-out;`;
+        document.querySelector(".input").style.cssText = `background-color:rgb(235, 233, 235);transition: background-color 0.9s ease-in-out;`;
+        document.querySelector(".left").style.cssText = `background-color:rgb(235, 233, 235);transition: background-color 0.9s ease-in-out;`;
+        document.querySelector(".btns-hidden").style.cssText = `background-color:rgb(235, 233, 235);transition: background-color 0.9s ease-in-out;`;
+        document.querySelector(".inner").style.cssText = `background-color:rgb(179, 184, 184); transition:background-color 0.9s ease-in-out;`;
+        document.querySelector(".ques").style.cssText = `color:black;transition:color 0.5s;`;
+
+    }
+    document.getAnimations().forEach(
+  function (animation) {
+    animation.playbackRate *= .1;
+  }
+)
+    document.querySelector(".n1").addEventListener("click",num);
+    document.querySelector(".n2").addEventListener("click",num);
+    document.querySelector(".n3").addEventListener("click",num);
+    document.querySelector(".n4").addEventListener("click",num);
+    document.querySelector(".n5").addEventListener("click",num);
+    document.querySelector(".n6").addEventListener("click",num);
+    document.querySelector(".n7").addEventListener("click",num);
+    document.querySelector(".n8").addEventListener("click",num);
+    document.querySelector(".n9").addEventListener("click",num);
+    document.querySelector(".n0").addEventListener("click",num);
+    document.querySelector(".ndot").addEventListener("click",num);
+    document.querySelector(".nbr1").addEventListener("click",num);
+    document.querySelector(".nbr2").addEventListener("click",num);
+    document.querySelector(".nsin").addEventListener("click",num);
+    document.querySelector(".ncos").addEventListener("click",num);
+    document.querySelector(".ntan").addEventListener("click",num);
+    document.querySelector(".ncot").addEventListener("click",num);
+    document.querySelector(".nsec").addEventListener("click",num);
+    document.querySelector(".ncosec").addEventListener("click",num);
+    document.querySelector(".nfac").addEventListener("click",function(){
+        if (document.querySelector(".ques").innerHTML == ""){
+        }
+        else{
+        document.querySelector(".ques").innerHTML +=  "!";
+    }
+    });
+    document.querySelector(".nlog").addEventListener("click",function(){
+        if (document.querySelector(".ques").innerHTML == ""){
+            document.querySelector(".ques").innerHTML +=  "log(";
+        }
+        else{
+        }
+    });
+    document.querySelector(".np").addEventListener("click",asdm)
+    // document.querySelector(".ns").addEventListener("click",asdm)
+    document.querySelector(".nm").addEventListener("click",asdm)
+    document.querySelector(".nd").addEventListener("click",asdm)
+
+    function asdm(){
+        if (document.querySelector(".ques").innerHTML == ""){
+        }
+        else{
+        document.querySelector(".ques").innerHTML +=  this.innerHTML;
+    }
+    };
+
+     function num(){
+        document.querySelector(".ques").innerHTML +=  this.innerHTML;
+
+    }
+    document.querySelector(".nc").addEventListener("click",function(){
+        var str = document.querySelector(".ques").innerHTML;
+        var newstr = str.slice(0,-1);
+        document.querySelector(".ques").innerHTML = newstr;        
+    });
+//  document.querySelector(".ns").addEventListener("click",function(){
+//      document.querySelector(".ns").innerHTML = "f";
+//  })
+
+// calculator functions imported
+
+
+const result = document.querySelector('.ques');
+const calculation = document.querySelector('.ans');
+
+function formula(){
+    var calMath = '';
+    calculation.textContent.split('').map(element => {
+    if(element === 'x'){
+        calMath += '*';
+    }else{
+        calMath += element;
+    }
+    });
+    return calMath;
+}
+
+
+function calc(formula){
+    if (['+', '-', "x", '/'].includes(formula[formula.length -1])){
+        formula = formula.slice(0, formula.length - 1);
+    }
+
+    return eval(formula);
+    
+    
+}
+
+
+function op(btn){
+    if(calculation.textContent.length !== 0){
+        if(!['+', '-', "x", '/'].includes(calculation.textContent[calculation.textContent.length -1])){
+            result.textContent =  calc(formula());
+            calculation.textContent += btn;
+        }else{
+            // result.textContent =  calc(formula());
+            calculation.textContent = calculation.textContent.slice(0, formula.length - 1);
+            calculation.textContent += btn;
+        }
+    }
+}
+
+
+document.querySelector('.np').addEventListener('click', function(){
+    op('+')
+}); 
+document.querySelector('.ns').addEventListener('click', function(){
+    op('-')
+}); 
+document.querySelector('.nd').addEventListener('click', function(){
+    op('/')
+}); 
+document.querySelector('.nm').addEventListener('click', function(){
+    op('x')
+}); 
+
+
+
+
+document.querySelector('.ndot').addEventListener('click', function(){
+    op('.')
+}); 
+
+
+
+document.querySelector('.ne').addEventListener('click', function(){
+    result.textContent =  (calc(formula()).length !== 0) ? calc(formula()) : result.textContent;
+    calculation.textContent = result.textContent;
+}); 
+
+
+
+    // calculator
+    </script>
+    
+</html

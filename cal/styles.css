@@ -1,0 +1,257 @@
+body {
+  background-color: rgb(0, 78, 92);
+  /* transition: all 0.5s ease; */
+}
+.calc {
+  position: relative;
+  top: 40px;
+  margin-top: 40px;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 0 0px;
+  max-height: 450px;
+  background-color: rgb(0, 78, 92);
+}
+.calc-hidden {
+  margin-top: 15px;
+}
+.num-btns {
+  /* padding:10px 20px; */
+  width: 327px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  background-color: rgb(235, 233, 235);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  text-align: center;
+}
+.num-btns-expand {
+  width: 366px;
+}
+.num-btns1 {
+  width: 250px;
+  height: 300px;
+  display: inline-block;
+  text-align: center;
+  padding: 0% 0% 35px;
+  margin: 0;
+  margin-right: 10px;
+}
+
+.num-btns2 {
+  height: 300px;
+  width: 80px;
+  display: inline-block;
+  padding-top: 7%;
+  margin: 0;
+  margin-left: -17px;
+  text-align: left;
+
+  /* margin-left: auto;
+    margin-right: auto; */
+}
+.btns-hidden .num {
+  font-size: 1.5rem;
+  padding: 10px 10px;
+  margin: 5% 2% -7px;
+}
+.btns-hidden .nexp {
+  padding: 10px 16px;
+}
+.btns-hidden .npi {
+  padding: 10px 17px;
+}
+.btns-hidden .nbr {
+  padding: 8px 20px 12px 19px;
+}
+.btns-hidden .ncosec {
+  font-size: 1.3rem;
+  padding: 12px 0px;
+  margin-left: 10px;
+}
+.btns-hidden .ncos {
+  padding: 10px 9px;
+}
+.btns-hidden {
+  position: relative;
+  width: 392px;
+  text-align: left;
+  margin-left: 5px;
+  margin-right: auto;
+  margin-bottom: -5px;
+  padding-right: 4px;
+  background-color: lavender;
+  visibility: visible;
+  padding-left: 32px;
+  /* transition:all 0.5s ease; */
+}
+.btns-hidden1 {
+  position: absolute;
+  visibility: hidden;
+}
+.num {
+  font-size: 2rem;
+  padding: 2% 5.9%;
+  border-radius: 100%;
+  margin: 3% 4%;
+  background-color: rgb(179, 177, 177);
+}
+.ns,
+.nm,
+.nd {
+  padding: 2% 6.6%;
+  color: rgb(35, 106, 116);
+}
+.ns {
+  padding: 7% 23%;
+  margin: 9% 0 2%;
+}
+.np {
+  padding: 5.8% 15.4%;
+  margin: 6% 0 10%;
+  color: rgb(35, 106, 116);
+}
+.nm {
+  padding-bottom: 3%;
+}
+.ne {
+  padding: 88% 14% 85%;
+  border-radius: 20px;
+  margin: 0% 0 14%;
+  color: rgb(72, 168, 69);
+  /* height :110px; */
+}
+.narr {
+  padding-right: 5.3%;
+  padding-left: 3.3%;
+}
+.nc {
+  padding: 1.7% 7% 2.6% 4.6%;
+  color: red;
+}
+.ndot {
+  padding: 1.5% 7% 2.6%;
+  margin-left: 4%;
+}
+.n0 {
+  margin-left: 10px;
+}
+.input {
+  margin-left: auto;
+  margin-right: auto;
+  width: 305px;
+  background-color: rgb(235, 233, 235);
+  margin-bottom: 0px;
+  height: 120px;
+  padding: 11px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.input-expand {
+  width: 406px;
+  margin-left: 5px;
+}
+.inner {
+  width: 270px;
+  height: 110px;
+  padding: 0;
+  margin: 15px auto 0px;
+  background-color: rgb(179, 184, 184);
+  border: rgb(235, 228, 228) 3px transparent;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  box-shadow: 0 0px 9px 3px white;
+  text-align: right;
+  font-size: 1.5rem;
+}
+.inner-expand {
+  width: 360px;
+}
+.ques {
+  height: 30px;
+  width: 260px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ques-hidden {
+  width: 340px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ans {
+  height: 60px;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ans-hidden {
+  width: 330px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.left {
+  width: 50px;
+  /* height: 334px; */
+  height: 74%;
+  position: absolute;
+  top: 268px;
+  left: 5px;
+  padding-left: 40px;
+  padding-top: 26px;
+  background-color: rgb(235, 233, 235);
+  border-bottom-left-radius: 20px;
+}
+.left-hidden {
+  visibility: hidden;
+}
+
+.nl {
+  padding: 6.3px 10px;
+  margin: 7.3px 0;
+}
+.nb {
+  padding: 4px 9px 7px;
+}
+.npow {
+  padding: 5px 6px;
+}
+.nroot {
+  padding: 5px 14px 5px 9px;
+}
+.nlog {
+  padding: 5.5px 12px;
+}
+.nfac {
+  padding: 5.6px 11px;
+}
+.mode-div {
+  position: relative;
+  top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.8rem;
+  /* padding: 0px 5px 1px 5px; */
+  border-radius: 20px;
+  width: 90px;
+}
+.mode {
+  position: relative;
+  font-size: 1.6rem;
+  top: 12px;
+  /* padding: 0px 5px 1px 5px; */
+  border-radius: 20px;
+  width: 70px;
+  margin-left: 15px;
+  border: none;
+  background-color: black;
+}
+.mode-div-hidden {
+  top: 35px;
+  left: -22px;
+  text-align: initial;
+}
