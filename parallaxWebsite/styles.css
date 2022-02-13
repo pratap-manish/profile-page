@@ -1,0 +1,115 @@
+html,
+body {
+  text-align: center;
+  margin: 0;
+  height: 100%;
+}
+p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.1rem;
+}
+.sec-1 {
+  margin: 0% 0%;
+  font-size: 1.3rem;
+  padding: 2% 5%;
+}
+.sec-2 {
+  font-size: 1.2rem;
+  margin: 0% 0%;
+  padding: 2% 5%;
+}
+.sec-3 {
+  font-size: 1.1rem;
+  margin: 0% 0%;
+  padding: 2% 5%;
+}
+.text {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #000;
+  font-size: 27px;
+  letter-spacing: 8px;
+}
+.text-1 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #000;
+  font-size: 27px;
+  letter-spacing: 6px;
+}
+span {
+  background-color: darkgrey;
+  padding: 1%;
+}
+
+/* h1{
+    height: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 150px;
+    margin-right: auto;
+    margin-top: 0;
+    margin-left: auto;
+    background-color: darkgray;
+} */
+h2 {
+  font-family: "Be Vietnam Pro", sans-serif;
+  /* font-family: 'Almarai', sans-serif; */
+}
+h3 {
+  position: relative;
+  bottom: 0;
+  top: 350px;
+  left: 0;
+  right: 0;
+  width: 150px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: darkgray;
+}
+/* .div-1{
+    min-height: 100%;
+} */
+.parallax-1 {
+  background-image: url("matt-jones-9CPAjGVB378-unsplash.jpg");
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.6;
+}
+.parallax-2 {
+  background-image: url("https://www.w3schools.com/howto/img_parallax3.jpg");
+  height: 600px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.6;
+}
+.parallax-3 {
+  background-image: url("https://jolly-kalam-23776e.netlify.app/parallaxsite/img/image3.jpg");
+  min-height: 600px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.6;
+}
+.parallax-4 {
+  background-image: url("matt-jones-9CPAjGVB378-unsplash.jpg");
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.6;
+  position: relative;
+}
